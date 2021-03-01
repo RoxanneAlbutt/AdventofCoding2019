@@ -37,6 +37,7 @@ def process_instructions(memory):
 
 def test_inputs():
     master_memory = get_input(inputfilename)
+
     temp_memory = []
     for i in range(0, len(master_memory)):
         temp_memory.append(master_memory[i])
@@ -51,7 +52,7 @@ def test_inputs():
                 break
 
             temp_memory = []
-            for i in master_memory:
+            for i in range(0, len(master_memory)):
                 temp_memory.append(master_memory[i])
 
 
