@@ -3,7 +3,6 @@
 
 import fileinput
 import math
-import sys
 from pathlib import Path
 
 inputfilename = Path(__file__).stem + "_input.txt"
