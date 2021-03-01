@@ -36,17 +36,23 @@ def process_instructions(memory):
 
 
 def test_inputs():
-    memory = get_input(inputfilename)
+    master_memory = get_input(inputfilename)
+    temp_memory = []
+    for i in range(0, len(master_memory)):
+        temp_memory.append(master_memory[i])
+
     for noun in range(100):
         for verb in range(100):
-            memory[1] = noun
-            memory[2] = verb
+            temp_memory[1] = noun
+            temp_memory[2] = verb
 
-            if process_instructions(memory) == 19690720:
+            if process_instructions(temp_memory) == 19690720:
                 print(100 * noun + verb)
                 break
 
-            memory = get_input(inputfilename)
+            temp_memory = []
+            for i in master_memory:
+                temp_memory.append(master_memory[i])
 
 
 test_inputs()
